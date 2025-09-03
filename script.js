@@ -29,3 +29,19 @@ if (form && note) {
     form.reset();
   });
 }
+
+// Floating nav bar: hide on scroll down, show on scroll up
+let lastScrollY = window.scrollY;
+const navbar = document.getElementById('site-navbar');
+if (navbar) {
+  window.addEventListener('scroll', () => {
+    const currentY = window.scrollY;
+    // If user scrolls down, hide nav; if scrolls up, show it
+    if (currentY > lastScrollY) {
+      navbar.style.transform = 'translateY(-100%)';
+    } else {
+      navbar.style.transform = 'translateY(0)';
+    }
+    lastScrollY = currentY;
+  });
+}

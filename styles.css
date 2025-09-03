@@ -43,9 +43,8 @@ h3{font-size:1.3rem; font-weight:600}
 
 /* header */
 .site-header{
-  position:sticky;
-  top:0;
-  z-index:100;
+  /* The header positioning is now handled via Tailwind classes on the element itself.
+     We keep styling here for background and border only. */
   background:var(--white);
   border-bottom:1px solid #e5e5e5;
 }
@@ -444,6 +443,10 @@ h3{font-size:1.3rem; font-weight:600}
   color:#e8e8e8;
   font-size:.9rem;
 }
+
+/* utility classes to accompany Tailwind usage */
+.bg-secondary{background:var(--secondary);}
+.btn-primary{background:var(--primary); color:#fff; box-shadow:var(--shadow);} /* re-declare for pages */
 
 /* responsive adjustments */
 @media (max-width: 980px){

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flooring — RightFit Interiors</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-white text-gray-900">
+  <!-- Navbar -->
+  <header id="site-navbar" class="site-header fixed top-0 left-0 w-full z-50 transition-transform duration-300">
+    <div class="container flex items-center justify-between py-4 mx-auto">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="logo.png" alt="Right Fit Interiors logo" class="h-10 w-auto" />
+      </a>
+      <button class="nav-toggle md:hidden" aria-controls="nav-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="nav-menu" class="nav-menu hidden md:flex items-center gap-6">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li class="cta"><a href="index.html#contact">Free consultation</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- Hero -->
+  <section class="pt-32 pb-16 bg-cover bg-center" style="background-image:url('https://c.pxhere.com/photos/62/ef/tv-362221.jpg!d')">
+    <div class="bg-black bg-opacity-60">
+      <div class="container mx-auto px-4 py-20 text-white text-center">
+        <h1 class="text-4xl font-bold mb-4">Flooring</h1>
+        <p class="max-w-2xl mx-auto">Enhance your interiors with our expert flooring services, offering a variety of materials and finishes to complement your home’s aesthetic.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Content -->
+  <main class="container mx-auto px-4 py-12 space-y-8">
+    <p>Beautiful flooring lays the foundation for any inspiring interior. We specialise in the supply and installation of hardwood, laminate, tile and luxury vinyl floors that not only look great but are durable and practical.</p>
+    <p>Our team can advise on the best flooring solutions for each room, ensuring colours and textures work harmoniously with your cabinetry and furnishings.</p>
+    <a href="index.html" class="inline-block mt-4 text-blue-600 hover:underline">← Back to home</a>
+  </main>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col about">
+        <h3>Transformations</h3>
+        <p>Expert kitchen and bathroom renovations for homeowners.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/" aria-label="Facebook">Facebook</a>
+          <a href="https://www.instagram.com/" aria-label="Instagram">Instagram</a>
+          <a href="https://www.tiktok.com/" aria-label="TikTok">TikTok</a>
+          <a href="https://twitter.com/" aria-label="X">X</a>
+        </div>
+      </div>
+      <div class="footer-col contact">
+        <h3>Get in touch</h3>
+        <ul class="footer-contact-list">
+          <li>07838 481 948</li>
+          <li><a href="mailto:Contact-Us@rightfit-kitchens.co.uk">Contact-Us@rightfit-kitchens.co.uk</a></li>
+        </ul>
+      </div>
+      <div class="footer-col service">
+        <h3>Service</h3>
+        <form class="subscribe-form">
+          <label for="subscribe-email-floor" class="visually-hidden">Enter your email address</label>
+          <input id="subscribe-email-floor" type="email" placeholder="Your email for contact" required />
+          <button type="submit" class="btn btn-secondary">Submit your request now</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span>. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

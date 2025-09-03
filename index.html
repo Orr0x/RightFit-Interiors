@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RightFit Interiors — Bespoke Carpentry &amp; Joinery</title>
-  <!-- Link to our custom stylesheet -->
+  <!-- Tailwind CSS CDN for rapid utility classes -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Link to our custom stylesheet (overrides and additional styles) -->
   <link rel="stylesheet" href="styles.css">
   <!-- Include Google Fonts for Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +15,7 @@
 </head>
 <body>
   <!-- Site Header -->
-  <header class="site-header">
+  <header id="site-navbar" class="site-header fixed top-0 left-0 w-full z-50 transition-transform duration-300">
     <div class="container header-inner">
       <!-- Logo (replace the RF mark with your logo image) -->
       <a href="#" class="brand">
@@ -81,53 +83,53 @@
       <p class="section-lead">Explore our range of services, from custom kitchen installations to bespoke bedroom fittings, all designed to enhance your home’s value and appeal.</p>
       <div class="cards-grid">
         <!-- Bedrooms card -->
-        <div class="card">
-          <img src="https://c.pxhere.com/photos/5c/3f/photo-1606932.jpg!d" alt="Bedroom service">
+        <a href="bedrooms.html" class="card block">
+          <img src="https://c.pxhere.com/photos/5c/3f/photo-1606932.jpg!d" alt="Bedroom service" class="transition-transform duration-300 transform hover:scale-105">
           <div class="card-body">
             <h3>Bedrooms</h3>
             <p>Transform your bedroom into a serene retreat with our bespoke solutions, including fitted wardrobes, custom storage, and elegant finishes tailored to your preferences.</p>
           </div>
-        </div>
+        </a>
         <!-- Kitchens card -->
-        <div class="card">
-          <img src="https://c.pxhere.com/photos/69/3c/kitchen_interior_luxury_home_modern_design_kitchen_interior_house-1370531.jpg!d" alt="Kitchen service">
+        <a href="kitchens.html" class="card block">
+          <img src="https://c.pxhere.com/photos/69/3c/kitchen_interior_luxury_home_modern_design_kitchen_interior_house-1370531.jpg!d" alt="Kitchen service" class="transition-transform duration-300 transform hover:scale-105">
           <div class="card-body">
             <h3>Kitchens</h3>
             <p>Our kitchen fitting service encompasses design consultation, custom cabinetry, and seamless installation. We work closely with you to create a kitchen that reflects your style and meets your functional needs.</p>
           </div>
-        </div>
+        </a>
         <!-- Internal Doors card -->
-        <div class="card">
-          <img src="https://c.pxhere.com/photos/5c/3f/photo-1606932.jpg!d" alt="Internal Doors service">
+        <a href="internal-doors.html" class="card block">
+          <img src="https://c.pxhere.com/photos/5c/3f/photo-1606932.jpg!d" alt="Internal Doors service" class="transition-transform duration-300 transform hover:scale-105">
           <div class="card-body">
             <h3>Internal Doors</h3>
             <p>Upgrade your home’s interior with professionally installed doors, available in a range of styles and materials to suit your design vision.</p>
           </div>
-        </div>
+        </a>
         <!-- Flooring card -->
-        <div class="card">
-          <img src="https://c.pxhere.com/photos/62/ef/tv-362221.jpg!d" alt="Flooring service">
+        <a href="flooring.html" class="card block">
+          <img src="https://c.pxhere.com/photos/62/ef/tv-362221.jpg!d" alt="Flooring service" class="transition-transform duration-300 transform hover:scale-105">
           <div class="card-body">
             <h3>Flooring</h3>
             <p>Enhance your interiors with our expert flooring services, offering a variety of materials and finishes to complement your home’s aesthetic.</p>
           </div>
-        </div>
+        </a>
         <!-- Media Walls card -->
-        <div class="card">
-          <img src="https://c.pxhere.com/photos/62/ef/tv-362221.jpg!d" alt="Media Walls service">
+        <a href="media-walls.html" class="card block">
+          <img src="https://c.pxhere.com/photos/62/ef/tv-362221.jpg!d" alt="Media Walls service" class="transition-transform duration-300 transform hover:scale-105">
           <div class="card-body">
             <h3>Media Walls</h3>
             <p>Create stunning media walls with integrated storage and display options, custom built to house your entertainment essentials.</p>
           </div>
-        </div>
+        </a>
         <!-- Under Stair Storage card -->
-        <div class="card">
-          <img src="https://c.pxhere.com/photos/5c/3f/photo-1606932.jpg!d" alt="Under Stair Storage service">
+        <a href="under-stair-storage.html" class="card block">
+          <img src="https://c.pxhere.com/photos/5c/3f/photo-1606932.jpg!d" alt="Under Stair Storage service" class="transition-transform duration-300 transform hover:scale-105">
           <div class="card-body">
             <h3>Under Stair Storage</h3>
             <p>Maximise unused space with bespoke under stair storage solutions, from pull-out drawers to hidden cabinets tailored to your staircase.</p>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -138,12 +140,12 @@
       <h2>Gallery</h2>
       <p class="section-lead">Explore our portfolio of stunning kitchen and bathroom transformations.</p>
       <div class="gallery-grid">
-        <div class="gallery-item"><img src="https://c.pxhere.com/photos/69/3c/kitchen_interior_luxury_home_modern_design_kitchen_interior_house-1370531.jpg!d" alt="Modern kitchen"></div>
-        <div class="gallery-item"><img src="https://c.pxhere.com/photos/5c/3f/photo-1606932.jpg!d" alt="Bedroom renovation"></div>
-        <div class="gallery-item"><img src="https://c.pxhere.com/photos/62/ef/tv-362221.jpg!d" alt="Media wall installation"></div>
-        <div class="gallery-item"><img src="https://c.pxhere.com/photos/5c/3f/photo-1606932.jpg!d" alt="Elegant bedroom"></div>
-        <div class="gallery-item"><img src="https://c.pxhere.com/photos/69/3c/kitchen_interior_luxury_home_modern_design_kitchen_interior_house-1370531.jpg!d" alt="Bright kitchen"></div>
-        <div class="gallery-item"><img src="https://c.pxhere.com/photos/62/ef/tv-362221.jpg!d" alt="Custom media wall"></div>
+        <div class="gallery-item"><img src="https://c.pxhere.com/photos/69/3c/kitchen_interior_luxury_home_modern_design_kitchen_interior_house-1370531.jpg!d" alt="Modern kitchen" class="transition-transform duration-300 transform hover:scale-105"></div>
+        <div class="gallery-item"><img src="https://c.pxhere.com/photos/5c/3f/photo-1606932.jpg!d" alt="Bedroom renovation" class="transition-transform duration-300 transform hover:scale-105"></div>
+        <div class="gallery-item"><img src="https://c.pxhere.com/photos/62/ef/tv-362221.jpg!d" alt="Media wall installation" class="transition-transform duration-300 transform hover:scale-105"></div>
+        <div class="gallery-item"><img src="https://c.pxhere.com/photos/5c/3f/photo-1606932.jpg!d" alt="Elegant bedroom" class="transition-transform duration-300 transform hover:scale-105"></div>
+        <div class="gallery-item"><img src="https://c.pxhere.com/photos/69/3c/kitchen_interior_luxury_home_modern_design_kitchen_interior_house-1370531.jpg!d" alt="Bright kitchen" class="transition-transform duration-300 transform hover:scale-105"></div>
+        <div class="gallery-item"><img src="https://c.pxhere.com/photos/62/ef/tv-362221.jpg!d" alt="Custom media wall" class="transition-transform duration-300 transform hover:scale-105"></div>
       </div>
     </div>
   </section>
