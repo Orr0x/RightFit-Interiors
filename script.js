@@ -1,6 +1,9 @@
-// mobile nav
+// JavaScript for RightFit Interiors
+// Handles mobile navigation toggle, dynamic footer year and simple contact form feedback.
+
+// Mobile navigation toggling
 const toggle = document.querySelector('.nav-toggle');
-const menu = document.getElementById('nav-menu');
+const menu   = document.getElementById('nav-menu');
 if (toggle) {
   toggle.addEventListener('click', () => {
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
@@ -9,13 +12,17 @@ if (toggle) {
   });
 }
 
-// footer year
-document.getElementById('year').textContent = new Date().getFullYear();
+// Footer year update
+const yearEl = document.getElementById('year');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
-// (optional) fake form handler — replace with your n8n webhook if you want
+// Fake form handler to show a note after submission. This should be replaced
+// with a real API endpoint or email service when going live.
 const form = document.querySelector('.contact-form');
 const note = document.getElementById('form-note');
-if (form) {
+if (form && note) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     note.textContent = 'Thanks — we’ll be in touch shortly.';

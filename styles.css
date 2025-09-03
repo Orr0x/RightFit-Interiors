@@ -1,127 +1,474 @@
+/*
+  Stylesheet for the RightFit Interiors website.
+  The design leans on a dark, modern aesthetic with warm accent colours.
+  It is responsive and adapts gracefully to smaller viewports.
+*/
+
+/*
+  Light theme variables
+  We transition the site from a dark aesthetic to a clean, modern look inspired by the
+  reference images. Colours here define the primary and secondary accents, base
+  backgrounds and muted text. Adjust these variables to tweak the palette consistently.
+*/
 :root{
-  --bg:#0b0d10;
-  --card:#11151a;
-  --muted:#8fa1b3;
-  --brand:#ffb703; /* warm accent */
-  --brand-2:#219ebc;
-  --text:#e8edf2;
-  --shadow:0 10px 30px rgba(0,0,0,.25);
+  --primary:#3765f0;      /* deep blue accent for buttons and highlights */
+  --secondary:#657a5e;    /* earthy green for footer background */
+  --bg:#ffffff;          /* main page background */
+  --bg-muted:#f5f5f5;    /* subtle section background */
+  --text-dark:#212529;   /* default dark text */
+  --text-muted:#646a71;  /* muted text for descriptions */
+  --white:#ffffff;
+  --shadow:0 6px 18px rgba(0,0,0,.08);
 }
 
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
   font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
-  color:var(--text);
-  background:linear-gradient(180deg,#0b0d10 0%, #0e1216 60%, #10151b 100%);
+  color:var(--text-dark);
+  background:var(--bg);
+  line-height:1.6;
 }
 
 /* utilities */
 .container{width:min(1100px,92vw); margin-inline:auto}
 img{max-width:100%; display:block; border-radius:14px}
-section{padding:72px 0}
-h1,h2,h3{line-height:1.15; margin:0 0 .5rem}
-h1{font-size:clamp(1.9rem,3vw,3rem)}
-h2{font-size:clamp(1.4rem,2.4vw,2.2rem)}
-h3{font-size:1.2rem}
-.lead{color:#d7dee6; font-weight:300; font-size:1.1rem}
-.section-lead{color:var(--muted)}
+section{padding:80px 0}
+h1,h2,h3{line-height:1.2; margin:0 0 .5rem}
+h1{font-size:clamp(2rem,4vw,3.2rem); font-weight:700}
+h2{font-size:clamp(1.5rem,3vw,2.4rem); font-weight:600}
+h3{font-size:1.3rem; font-weight:600}
+.lead{color:var(--text-muted); font-weight:300; font-size:1.1rem}
+.section-lead{color:var(--text-muted)}
 
 /* header */
 .site-header{
-  position:sticky; top:0; z-index:50;
-  background:rgba(11,13,16,.7); backdrop-filter: blur(8px);
-  border-bottom:1px solid rgba(255,255,255,.06);
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:var(--white);
+  border-bottom:1px solid #e5e5e5;
 }
 .header-inner{
-  display:flex; align-items:center; justify-content:space-between;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
   padding:14px 0;
 }
-.brand{display:flex; gap:.6rem; align-items:center; color:var(--text); text-decoration:none}
+.brand{display:flex; gap:.6rem; align-items:center; color:var(--text-dark); text-decoration:none; font-weight:600;}
 .brand-mark{
-  background:var(--brand); color:#121417; font-weight:700; display:grid; place-items:center;
-  width:40px; height:40px; border-radius:10px; box-shadow:var(--shadow);
+  background:var(--primary);
+  color:#fff;
+  font-weight:700;
+  display:grid;
+  place-items:center;
+  width:40px;
+  height:40px;
+  border-radius:10px;
+  box-shadow:var(--shadow);
 }
-.brand-text{font-weight:600; letter-spacing:.2px}
+.brand-text{letter-spacing:.2px}
+
+/* when using an image logo, size it appropriately */
+.site-header .logo{
+  height:48px;
+  width:auto;
+  display:block;
+}
 
 /* nav */
 .nav-toggle{
-  display:none; background:none; border:0; padding:8px; margin-left:auto; cursor:pointer
+  display:none;
+  background:none;
+  border:0;
+  padding:8px;
+  margin-left:auto;
+  cursor:pointer;
 }
-.nav-toggle span{display:block; width:26px; height:2px; background:var(--text); margin:6px 0; transition:.25s}
-.nav-menu{display:flex; gap:18px; align-items:center; list-style:none; margin:0; padding:0}
-.nav-menu a{color:var(--text); text-decoration:none; opacity:.9}
+.nav-toggle span{
+  display:block;
+  width:26px;
+  height:2px;
+  background:var(--text-dark);
+  margin:6px 0;
+  transition:.25s;
+}
+.nav-menu{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.nav-menu a{
+  color:var(--text-dark);
+  text-decoration:none;
+  opacity:.85;
+}
 .nav-menu a:hover{opacity:1}
 .nav-menu .cta a{
-  background:var(--brand); color:#121417; padding:10px 14px; border-radius:999px; font-weight:700
+  background:var(--primary);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:999px;
+  font-weight:700;
 }
 
-/* hero */
-.hero{padding:88px 0 48px}
-.hero-inner{display:grid; grid-template-columns:1.1fr .9fr; gap:42px; align-items:center}
-.hero-badges{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 0; padding:0; list-style:none; color:var(--muted)}
-.btn{display:inline-block; border-radius:12px; padding:12px 18px; text-decoration:none}
-.btn-primary{background:var(--brand); color:#121417; font-weight:700}
-.hero-image img{box-shadow:var(--shadow)}
-
-/* intro */
-.intro{background:#0f141a; border-block:1px solid rgba(255,255,255,.06)}
-.intro p{color:#c9d3dc}
-
-/* services */
-.services .cards{
-  display:grid; gap:20px;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  margin-top:26px;
+/* hero with fixed background and features */
+.hero-fixed{
+  position:relative;
+  background-image:url('https://c.pxhere.com/photos/69/3c/kitchen_interior_luxury_home_modern_design_kitchen_interior_house-1370531.jpg!d');
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  color:#fff;
+  text-align:center;
+  padding:140px 0 100px;
 }
-.card{background:var(--card); border:1px solid rgba(255,255,255,.07); border-radius:16px; overflow:hidden; box-shadow:var(--shadow)}
-.card-body{padding:16px}
-.card h3{margin:0 0 .4rem}
-.card p{color:var(--muted)}
+.hero-fixed::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+}
+.hero-fixed .hero-content{
+  position:relative;
+  z-index:1;
+}
+.hero-fixed h1{
+  margin-bottom:1rem;
+}
+.hero-fixed .hero-lead{
+  color:#e8e8e8;
+  font-size:1.2rem;
+  font-weight:300;
+  margin-bottom:2rem;
+}
+.btn{display:inline-block; border-radius:12px; padding:14px 22px; text-decoration:none; font-weight:600}
+.btn-primary{
+  background:var(--primary);
+  color:#fff;
+  box-shadow:var(--shadow);
+}
+.btn-secondary{
+  background:var(--secondary);
+  color:#fff;
+  box-shadow:var(--shadow);
+}
+.hero-features{
+  position:relative;
+  z-index:1;
+  display:flex;
+  flex-wrap:wrap;
+  gap:24px;
+  justify-content:center;
+  margin-top:60px;
+  padding:20px 0;
+  background:rgba(255,255,255,0.85);
+  color:var(--text-dark);
+  border-top:1px solid rgba(0,0,0,0.08);
+  border-bottom:1px solid rgba(0,0,0,0.08);
+}
+.hero-features li{
+  flex:1 1 200px;
+  text-align:center;
+  max-width:260px;
+}
+.hero-features li strong{
+  display:block;
+  font-weight:600;
+  margin-bottom:4px;
+}
+.hero-features li span{
+  display:block;
+  font-size:.85rem;
+  color:var(--text-muted);
+}
+
+/* tagline */
+.tagline{
+  background:var(--white);
+}
+.tagline-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+.tagline-text h2{
+  margin:0 0 .8rem;
+}
+.tagline-text p{
+  color:var(--text-muted);
+  font-size:1.05rem;
+}
+.tagline-image img{
+  border-radius:16px;
+  box-shadow:var(--shadow);
+}
+
+/* services light */
+.services-light{
+  background:var(--bg-muted);
+}
+.services-light h2{
+  text-align:center;
+}
+.services-light .section-lead{
+  text-align:center;
+  max-width:600px;
+  margin:0 auto 2rem;
+}
+.cards-grid{
+  display:grid;
+  gap:24px;
+  grid-template-columns:repeat(3, 1fr);
+  margin-top:30px;
+}
+.cards-grid .card{
+  background:var(--white);
+  border:1px solid #e5e5e5;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 6px 14px rgba(0,0,0,.05);
+  display:flex;
+  flex-direction:column;
+}
+.cards-grid .card img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+}
+.cards-grid .card-body{
+  padding:20px;
+  flex:1;
+}
+.cards-grid .card h3{
+  margin-top:0;
+  margin-bottom:.5rem;
+  font-size:1.2rem;
+}
+.cards-grid .card p{
+  color:var(--text-muted);
+  font-size:.95rem;
+  line-height:1.5;
+}
 
 /* gallery */
-.gallery .grid{
-  display:grid; gap:12px; margin-top:22px;
-  grid-template-columns:repeat(3,minmax(0,1fr));
+.gallery{
+  background:var(--white);
 }
-.tile img{aspect-ratio:4/3; object-fit:cover;}
+.gallery h2{
+  text-align:center;
+}
+.gallery .section-lead{
+  text-align:center;
+  margin-bottom:30px;
+}
+.gallery-grid{
+  display:grid;
+  gap:24px;
+  grid-template-columns:repeat(2, 1fr);
+}
+.gallery-item img{
+  width:100%;
+  border-radius:16px;
+  box-shadow:0 6px 14px rgba(0,0,0,.05);
+  aspect-ratio:4/3;
+  object-fit:cover;
+}
 
-/* testimonials */
-.testimonials{background:#0f141a}
-.quotes{display:grid; gap:18px; grid-template-columns:repeat(2,minmax(0,1fr)); margin-top:16px}
-.quote{background:var(--card); border:1px solid rgba(255,255,255,.08); padding:18px; border-radius:16px}
-.quote blockquote{margin:0 0 .6rem; color:#dfe6ee}
+/* testimonials with fixed background */
+.testimonials-static{
+  position:relative;
+  background-image:url('https://c.pxhere.com/photos/69/3c/kitchen_interior_luxury_home_modern_design_kitchen_interior_house-1370531.jpg!d');
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  color:#fff;
+}
+.testimonials-static::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+}
+.testimonials-overlay{
+  position:relative;
+  padding:90px 0;
+}
+.testimonials-container{
+  display:flex;
+  flex-wrap:wrap;
+  gap:40px;
+  justify-content:center;
+}
+.testimonial{
+  max-width:400px;
+  text-align:center;
+}
+.testimonial .stars{
+  font-size:1.4rem;
+  color:var(--primary);
+  margin-bottom:8px;
+}
+.testimonial p{
+  margin:0 0 8px;
+}
+.testimonial .author{
+  font-weight:600;
+  margin-top:6px;
+}
 
 /* contact */
-.contact-inner{display:grid; grid-template-columns:1fr 1fr; gap:42px}
-.contact-list{list-style:none; padding:0; margin:1rem 0 0}
-.contact-list a{color:var(--text)}
+.contact{
+  background:var(--white);
+}
+.contact-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+.contact-info h2{
+  margin-top:0;
+}
+.contact-info p{
+  color:var(--text-muted);
+}
+.contact-list{
+  list-style:none;
+  padding:0;
+  margin:1rem 0 0;
+}
+.contact-list li{
+  margin-bottom:8px;
+  color:var(--text-dark);
+}
+.contact-list a{
+  color:var(--primary);
+  text-decoration:none;
+}
 .contact-form{
-  background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:18px
+  background:var(--bg-muted);
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,.05);
 }
-.contact-form label{display:block; font-size:.95rem; color:#d7dee6; margin:10px 0}
-.contact-form input, .contact-form textarea{
-  width:100%; color:var(--text); background:#0e1216; border:1px solid rgba(255,255,255,.12); border-radius:10px; padding:10px 12px
+.contact-form label{
+  display:block;
+  font-size:.95rem;
+  color:var(--text-dark);
+  margin:10px 0 4px;
 }
-.contact-form button{margin-top:8px}
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  color:var(--text-dark);
+  background:var(--white);
+  border:1px solid #ccc;
+  border-radius:10px;
+  padding:10px 12px;
+}
+.contact-form button{
+  margin-top:12px;
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  padding:12px 18px;
+  border-radius:10px;
+  cursor:pointer;
+}
 
 /* footer */
-.site-footer{padding:26px 0; border-top:1px solid rgba(255,255,255,.06); background:#0b0d10}
-.footer-inner{display:flex; justify-content:space-between; align-items:center}
-.site-footer a{color:#cfd7de; text-decoration:none; margin-right:12px}
+.site-footer{
+  background:var(--secondary);
+  color:#fff;
+  padding:60px 0 30px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+.footer-col h3{
+  margin-top:0;
+  margin-bottom:.6rem;
+}
+.footer-col p,
+.footer-col li,
+.footer-col a{
+  color:#f5f5f5;
+  font-size:.95rem;
+  line-height:1.5;
+}
+.footer-col a{
+  text-decoration:none;
+}
+.social-links a{
+  display:inline-block;
+  margin-right:8px;
+  color:#f5f5f5;
+}
+.footer-contact-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.subscribe-form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.subscribe-form input{
+  padding:10px;
+  border:none;
+  border-radius:8px;
+}
+.subscribe-form button{
+  padding:12px;
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+.footer-bottom{
+  text-align:center;
+  margin-top:30px;
+  border-top:1px solid rgba(255,255,255,.2);
+  padding-top:20px;
+}
+.footer-bottom p{
+  margin:0;
+  color:#e8e8e8;
+  font-size:.9rem;
+}
 
-/* responsive */
+/* responsive adjustments */
 @media (max-width: 980px){
-  .hero-inner{grid-template-columns:1fr}
-  .services .cards{grid-template-columns:repeat(2,1fr)}
+  .tagline-inner{grid-template-columns:1fr; text-align:center}
+  .services-light .cards-grid{grid-template-columns:repeat(2,1fr)}
   .contact-inner{grid-template-columns:1fr}
-  .quotes{grid-template-columns:1fr}
+  .testimonials-container{flex-direction:column; align-items:center}
+  .footer-grid{grid-template-columns:1fr 1fr;}
 }
 @media (max-width: 720px){
   .nav-toggle{display:block}
   .nav-menu{
-    position:fixed; inset:64px 12px auto 12px; background:#0f141a; border:1px solid rgba(255,255,255,.08);
-    border-radius:14px; padding:10px; flex-direction:column; gap:8px; display:none
+    position:fixed;
+    inset:64px 12px auto 12px;
+    background:var(--white);
+    border:1px solid #ddd;
+    border-radius:14px;
+    padding:12px;
+    flex-direction:column;
+    gap:10px;
+    display:none;
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
   }
   .nav-menu.show{display:flex}
+  .services-light .cards-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
 }

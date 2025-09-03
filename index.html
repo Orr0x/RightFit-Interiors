@@ -1,203 +1,243 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>RightFit Interiors — Bespoke Carpentry & Joinery</title>
-  <meta name="description" content="Bespoke kitchens, bedrooms, media walls and under-stair storage. Over 25 years of craftsmanship serving Burton on Trent and nearby." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RightFit Interiors — Bespoke Carpentry &amp; Joinery</title>
+  <!-- Link to our custom stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include Google Fonts for Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header / Nav -->
+  <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="RightFit Interiors">
-        <span class="brand-mark">RF</span>
-        <span class="brand-text">RightFit <strong>Interiors</strong></span>
+      <!-- Logo (replace the RF mark with your logo image) -->
+      <a href="#" class="brand">
+        <img src="logo.png" alt="Right Fit Interiors logo" class="logo">
       </a>
-
-      <nav id="nav" class="nav">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
-          <span></span><span></span><span></span>
-        </button>
-        <ul id="nav-menu" class="nav-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#testimonials">Reviews</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="cta"><a href="#contact">Free consultation</a></li>
-        </ul>
-      </nav>
+      <!-- Mobile nav toggle button -->
+      <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <!-- Primary navigation -->
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="cta"><a href="#contact">Free consultation</a></li>
+      </ul>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <h1>Transforming homes with bespoke carpentry & joinery</h1>
-        <p class="lead">Over <strong>25 years</strong> crafting custom kitchens, bedrooms, and smart storage tailored to your lifestyle.</p>
-        <a class="btn btn-primary" href="#contact">Schedule your free consultation</a>
-        <ul class="hero-badges">
-          <li>✓ Kitchens</li>
-          <li>✓ Bedrooms</li>
-          <li>✓ Media walls</li>
-          <li>✓ Under-stair storage</li>
-        </ul>
+  <!-- Hero section with fixed background -->
+  <section class="hero-fixed">
+    <div class="hero-content">
+      <div class="container">
+        <h1>Transforming Homes with Bespoke Carpentry &amp; Joinery</h1>
+        <p class="hero-lead">Over 25 years of experience creating custom kitchens, bedrooms, and interiors tailored to your lifestyle.</p>
+        <a href="#contact" class="btn btn-primary">Schedule Your Free Consultation</a>
       </div>
-      <figure class="hero-image">
-        <!-- Replace with your own hero image -->
-        <img src="images/hero-kitchen.jpg" alt="Modern bespoke kitchen with island" />
-      </figure>
+    </div>
+    <!-- Feature row overlay -->
+    <ul class="hero-features">
+      <li>
+        <strong>Bespoke Designs</strong>
+        <span>Tailored solutions for your unique needs.</span>
+      </li>
+      <li>
+        <strong>Bedrooms</strong>
+        <span>Quality craftsmanship for stunning bedroom renovations.</span>
+      </li>
+      <li>
+        <strong>Kitchens</strong>
+        <span>Maximize market appeal with expert renovations.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Tagline / About section -->
+  <section class="tagline">
+    <div class="container tagline-inner">
+      <div class="tagline-text">
+        <h2>Transforming Spaces, Elevating Homes</h2>
+        <p>At RightFit Interiors, we blend traditional craftsmanship with modern design to deliver spaces that are both functional and beautiful. Our commitment to quality and attention to detail ensures every project exceeds expectations.</p>
+      </div>
+      <div class="tagline-image">
+        <!-- Complementary kitchen image -->
+        <img src="https://c.pxhere.com/photos/69/3c/kitchen_interior_luxury_home_modern_design_kitchen_interior_house-1370531.jpg!d" alt="Contemporary kitchen">
+      </div>
     </div>
   </section>
 
-  <!-- Intro -->
-  <section class="intro">
+  <!-- Services section -->
+  <section class="services-light" id="services">
     <div class="container">
-      <h2>Craftsmanship + modern design</h2>
-      <p>We blend traditional joinery with contemporary finishes to deliver spaces that are practical, durable and beautiful — with obsessive attention to detail from first measure to final fit.</p>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="services">
-    <div class="container">
-      <h2>Expert services</h2>
-      <p class="section-lead">From concept to completion, we design, build and install with care — enhancing your home’s function and value.</p>
-
-      <div class="cards">
-        <article class="card">
-          <img src="images/service-kitchens.jpg" alt="Bespoke kitchen cabinetry" />
-          <div class="card-body">
-            <h3>Kitchens</h3>
-            <p>Design consultation, custom cabinetry and seamless fitting — a kitchen that reflects your style and works hard every day.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="images/service-bedrooms.jpg" alt="Fitted wardrobes and bedroom joinery" />
+      <h2>Expert Services</h2>
+      <p class="section-lead">Explore our range of services, from custom kitchen installations to bespoke bedroom fittings, all designed to enhance your home’s value and appeal.</p>
+      <div class="cards-grid">
+        <!-- Bedrooms card -->
+        <div class="card">
+          <img src="https://c.pxhere.com/photos/5c/3f/photo-1606932.jpg!d" alt="Bedroom service">
           <div class="card-body">
             <h3>Bedrooms</h3>
-            <p>Serene spaces with fitted wardrobes, clever storage and clean finishes tailored to your room and routine.</p>
+            <p>Transform your bedroom into a serene retreat with our bespoke solutions, including fitted wardrobes, custom storage, and elegant finishes tailored to your preferences.</p>
           </div>
-        </article>
-
-        <article class="card">
-          <img src="images/service-storage.jpg" alt="Under-stair storage drawers" />
+        </div>
+        <!-- Kitchens card -->
+        <div class="card">
+          <img src="https://c.pxhere.com/photos/69/3c/kitchen_interior_luxury_home_modern_design_kitchen_interior_house-1370531.jpg!d" alt="Kitchen service">
           <div class="card-body">
-            <h3>Under-stair storage</h3>
-            <p>Make the most of every inch — drawers, pull-outs and cupboards custom-made to your staircase.</p>
+            <h3>Kitchens</h3>
+            <p>Our kitchen fitting service encompasses design consultation, custom cabinetry, and seamless installation. We work closely with you to create a kitchen that reflects your style and meets your functional needs.</p>
           </div>
-        </article>
-
-        <article class="card">
-          <img src="images/service-media.jpg" alt="Media wall with shelving and lights" />
+        </div>
+        <!-- Internal Doors card -->
+        <div class="card">
+          <img src="https://c.pxhere.com/photos/5c/3f/photo-1606932.jpg!d" alt="Internal Doors service">
           <div class="card-body">
-            <h3>Media walls</h3>
-            <p>Feature walls with integrated lighting, shelving and cable-tidy for a calm, polished living space.</p>
+            <h3>Internal Doors</h3>
+            <p>Upgrade your home’s interior with professionally installed doors, available in a range of styles and materials to suit your design vision.</p>
           </div>
-        </article>
-
-        <article class="card">
-          <img src="images/service-flooring.jpg" alt="Wood flooring installation" />
+        </div>
+        <!-- Flooring card -->
+        <div class="card">
+          <img src="https://c.pxhere.com/photos/62/ef/tv-362221.jpg!d" alt="Flooring service">
           <div class="card-body">
-            <h3>Flooring & Internal doors</h3>
-            <p>Engineered wood, LVT and quality doors professionally fitted to elevate your interior feel.</p>
+            <h3>Flooring</h3>
+            <p>Enhance your interiors with our expert flooring services, offering a variety of materials and finishes to complement your home’s aesthetic.</p>
           </div>
-        </article>
+        </div>
+        <!-- Media Walls card -->
+        <div class="card">
+          <img src="https://c.pxhere.com/photos/62/ef/tv-362221.jpg!d" alt="Media Walls service">
+          <div class="card-body">
+            <h3>Media Walls</h3>
+            <p>Create stunning media walls with integrated storage and display options, custom built to house your entertainment essentials.</p>
+          </div>
+        </div>
+        <!-- Under Stair Storage card -->
+        <div class="card">
+          <img src="https://c.pxhere.com/photos/5c/3f/photo-1606932.jpg!d" alt="Under Stair Storage service">
+          <div class="card-body">
+            <h3>Under Stair Storage</h3>
+            <p>Maximise unused space with bespoke under stair storage solutions, from pull-out drawers to hidden cabinets tailored to your staircase.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Gallery -->
-  <section id="gallery" class="gallery">
+  <!-- Gallery section -->
+  <section class="gallery" id="gallery">
     <div class="container">
-      <h2>Recent work</h2>
-      <p class="section-lead">A few transformations from our portfolio.</p>
-
-      <div class="grid">
-        <!-- Replace thumbnails with your own images -->
-        <a class="tile" href="images/gallery-01.jpg"><img src="images/gallery-01.jpg" alt="Kitchen makeover 1"></a>
-        <a class="tile" href="images/gallery-02.jpg"><img src="images/gallery-02.jpg" alt="Kitchen makeover 2"></a>
-        <a class="tile" href="images/gallery-03.jpg"><img src="images/gallery-03.jpg" alt="Kitchen makeover 3"></a>
-        <a class="tile" href="images/gallery-04.jpg"><img src="images/gallery-04.jpg" alt="Bedroom wardrobes"></a>
-        <a class="tile" href="images/gallery-05.jpg"><img src="images/gallery-05.jpg" alt="Media wall"></a>
-        <a class="tile" href="images/gallery-06.jpg"><img src="images/gallery-06.jpg" alt="Under-stair storage"></a>
+      <h2>Gallery</h2>
+      <p class="section-lead">Explore our portfolio of stunning kitchen and bathroom transformations.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="https://c.pxhere.com/photos/69/3c/kitchen_interior_luxury_home_modern_design_kitchen_interior_house-1370531.jpg!d" alt="Modern kitchen"></div>
+        <div class="gallery-item"><img src="https://c.pxhere.com/photos/5c/3f/photo-1606932.jpg!d" alt="Bedroom renovation"></div>
+        <div class="gallery-item"><img src="https://c.pxhere.com/photos/62/ef/tv-362221.jpg!d" alt="Media wall installation"></div>
+        <div class="gallery-item"><img src="https://c.pxhere.com/photos/5c/3f/photo-1606932.jpg!d" alt="Elegant bedroom"></div>
+        <div class="gallery-item"><img src="https://c.pxhere.com/photos/69/3c/kitchen_interior_luxury_home_modern_design_kitchen_interior_house-1370531.jpg!d" alt="Bright kitchen"></div>
+        <div class="gallery-item"><img src="https://c.pxhere.com/photos/62/ef/tv-362221.jpg!d" alt="Custom media wall"></div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials" class="testimonials">
-    <div class="container">
-      <h2>Kind words</h2>
-      <div class="quotes">
-        <figure class="quote">
-          <blockquote>“RightFit Interiors turned our dated kitchen into a bright, super-practical space. Craftsmanship was spot on.”</blockquote>
-          <figcaption>— Sarah J.</figcaption>
-        </figure>
-        <figure class="quote">
-          <blockquote>“Attention to detail was exceptional. The fitted wardrobes are flawless and gave us loads of storage.”</blockquote>
-          <figcaption>— Mark T.</figcaption>
-        </figure>
+  <!-- Testimonials section with fixed background -->
+  <section class="testimonials-static">
+    <div class="testimonials-overlay">
+      <div class="container">
+        <h2>Testimonials</h2>
+        <div class="testimonials-container">
+          <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>RightFit Interiors transformed our outdated kitchen into a stunning space. Highly recommend their craftsmanship and service!</p>
+            <div class="author">Sarah&nbsp;J.</div>
+          </div>
+          <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>Exceptional service and attention to detail! My bedroom renovation exceeded all expectations. Truly a professional experience.</p>
+            <div class="author">Mark&nbsp;T.</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
+  <!-- Contact section -->
+  <section class="contact" id="contact">
     <div class="container contact-inner">
-      <div class="contact-copy">
+      <!-- Contact information -->
+      <div class="contact-info">
         <h2>Get in touch</h2>
-        <p>Serving homeowners in and around <strong>Burton on Trent, UK</strong>. Tell us about your project and we’ll get back with ideas and a free quote.</p>
-
+        <p>Serving homeowners in and around Burton on Trent, UK. Tell us about your project and we’ll get back with ideas and a free quote.</p>
         <ul class="contact-list">
-          <li><strong>Phone:</strong> <a href="tel:+447838481948">07838 481 948</a></li>
-          <li><strong>Email:</strong> <a href="mailto:Contact-Us@rightfit-kitchens.co.uk">Contact-Us@rightfit-kitchens.co.uk</a></li>
-          <li><strong>Social:</strong> 
-            <a href="https://www.facebook.com/61573506463733" target="_blank" rel="noopener">Facebook</a> · 
-            <a href="https://x.com/" target="_blank" rel="noopener">X</a> · 
-            <a href="https://tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+          <li>Phone: <a href="tel:07838481948">07838 481 948</a></li>
+          <li>Email: <a href="mailto:Contact-Us@rightfit-kitchens.co.uk">Contact-Us@rightfit-kitchens.co.uk</a></li>
+          <li>Social: 
+            <a href="https://www.facebook.com/">Facebook</a> · 
+            <a href="https://twitter.com/">X</a> · 
+            <a href="https://www.tiktok.com/">TikTok</a>
           </li>
         </ul>
       </div>
-
-      <form class="contact-form" name="contact" netlify>
-        <label>
-          Your name
-          <input type="text" name="name" required>
-        </label>
-        <label>
-          Email address
-          <input type="email" name="email" required>
-        </label>
-        <label>
-          Your message
-          <textarea name="message" rows="6" required></textarea>
-        </label>
-        <button class="btn btn-primary" type="submit">Submit your inquiry</button>
-        <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+      <!-- Contact form -->
+      <form class="contact-form">
+        <label>Your name</label>
+        <input type="text" placeholder="Enter your name" required>
+        <label>Email address</label>
+        <input type="email" placeholder="Enter your email" required>
+        <label>Your message</label>
+        <textarea rows="5" placeholder="Tell us about your project" required></textarea>
+        <button type="submit" class="btn btn-primary">Submit your inquiry</button>
+        <p id="form-note" class="section-lead"></p>
       </form>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Site footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> RightFit Interiors. All rights reserved.</p>
-      <nav aria-label="Secondary">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <div class="container footer-grid">
+      <!-- About column -->
+      <div class="footer-col about">
+        <h3>Transformations</h3>
+        <p>Expert kitchen and bathroom renovations for homeowners.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/" aria-label="Facebook">Facebook</a>
+          <a href="https://www.instagram.com/" aria-label="Instagram">Instagram</a>
+          <a href="https://www.tiktok.com/" aria-label="TikTok">TikTok</a>
+          <a href="https://twitter.com/" aria-label="X">X</a>
+        </div>
+      </div>
+      <!-- Contact column -->
+      <div class="footer-col contact">
+        <h3>Get in touch</h3>
+        <ul class="footer-contact-list">
+          <li>07838 481 948</li>
+          <li><a href="mailto:Contact-Us@rightfit-kitchens.co.uk">Contact-Us@rightfit-kitchens.co.uk</a></li>
+        </ul>
+      </div>
+      <!-- Service column -->
+      <div class="footer-col service">
+        <h3>Service</h3>
+        <form class="subscribe-form">
+          <label for="subscribe-email" class="visually-hidden">Enter your email address</label>
+          <input id="subscribe-email" type="email" placeholder="Your email for contact" required>
+          <button type="submit" class="btn btn-secondary">Submit your request now</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span>. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- JavaScript for interactive features -->
   <script src="script.js"></script>
 </body>
 </html>
